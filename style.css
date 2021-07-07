@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+  }
+  .column{
+    margin-top: 30px;;
+  }
+  #header-cofounder{
+    display: flex;
+    justify-content:center;
+  }
+
+.underline::after{
+    content: "";
+    border-bottom: 2px solid #00629B;
+    position: absolute;
+    display:block;
+    left: calc(50% - 30px);
+    top: 70px;
+    width: 50px;
+}
+.underline::before{
+    content: "";
+    border-bottom: 2px solid #00629B;
+    position: absolute;
+    display:block;
+    left: calc(50% - 30px);
+    top: 65px;
+    width: 50px;
+}
+  /* Create two equal columns that floats next to each other */
+  #column-1{
+    /* background-color:red; */
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    /* z-index: 10; */
+  }
+  #column-2{
+    /* background-color:rgb(209, 207, 207); */
+    float: left;
+    width: 65%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  .img-container{
+      float:right;
+      width:260px;
+      /* background-color:red; */
+      height: 200px; 
+      /* z-index: 100; */
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .img-container img{
+      width: 250px;
+  }
+  #founder-name{
+    font-size:20px;
+    /* font-weight: italic; */
+  }
+  
+  /* right */
+
+  .msg-container{
+      background-color: #ECEAEA;
+      /* padding:10px */
+      /* width:700px; */
+    }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (min-width: 761px) {
+      .msg-container{
+          position:relative;
+          top:50px;
+          right:90px;
+          z-index: -1;
+          /* width:125vmin; */
+          width:690px;
+          padding: 20px 40px 20px 100px;
+          text-align: justify;
+      }
+      #comma-1{
+        /* float:right; */
+        width:60px;
+        position: relative;
+        left:220px;
+        top:-40px;
+      }
+      .img-container{
+        position: relative;
+        left:20px;
+      }
+  }
+  @media screen and (max-width: 768px)and (min-width: 761px)  {
+    .img-container{
+      left:10px;
+    }
+    .msg-container{
+      right:95px;
+    }
+
+  }
+  @media screen and (max-width: 920px) {
+    .msg-container{
+      width:570px;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    #column-1 {
+      width: 100%;
+    }
+    #column-2 {
+      width: 100%;
+    }
+    .msg-container{
+      width:100%;
+    }
+    #column-1{
+      display:flex;
+      justify-content: center;
+    }
+    .msg-container{
+      padding:20px;
+      position: relative;
+      top:-105px;
+      z-index: -1;
+    }
+  }
+  @media screen and (max-width: 390px) {
+    #header-cofounder{
+      font-size:13px;
+    }
+  }
+  @media screen and (max-width: 310px) {
+    #header-cofounder{
+      font-size:10px;
+    }
+  }
